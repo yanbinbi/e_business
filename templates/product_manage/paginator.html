@@ -1,0 +1,22 @@
+{% load staticfiles %}
+{% extends "list.html" %}
+
+<div class="paginator">
+    {# 判断是否是第一页 #}
+    {% if page.has_previous %}
+        <a href="/list_{{ category.id }}_{{ sort }}_{{ page.previous_page_number }}">上一页</a>
+    {% endif %}
+
+    {% for page_index in paginator.page_range %}
+        {# 是否为当前页 #}
+        {% if page.number == page_index %}
+            <a href="/list_{{ category.id }}_{{ sort }}_{{ page_index }}" class="active">{{ page_index }}</a>
+        {% else %}
+            <a href="/list_{{ category.id }}_{{ sort }}_{{ page_index }}">{{ page_index }}</a>
+        {% endif %}
+    {% endfor %}
+
+    {% if page.has_next %}
+        <a href="/list_{{ category.id }}_{{ sort }}_{{ page.next_page_number }}">下一页</a>
+    {% endif %}
+</div>
