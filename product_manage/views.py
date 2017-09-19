@@ -1,3 +1,4 @@
+# from urllib import request
 from django.shortcuts import render
 from product_manage.models import Product, Category
 from cart_manage.models import Cart
@@ -10,13 +11,14 @@ def get_paginator(list_to_page, num_per_page):
         # 创建分页对象
         paginator = Paginator(list_to_page, num_per_page)
         # 返回Page对象，包含商品信息
-        page = paginator.page()
+        page = int(request.GET.get("page", 1))
+        list_to_page = paginator.page()
     except PageNotAnInteger as e:
         page = paginator.page(1)
     except EmptyPage as e:
         page = paginator.page(1)
 
-    return page
+    return list_to_page
 
 
 # 首页
@@ -66,12 +68,12 @@ def list_products(request, category_id, sid, pindex):
         product_list = Product.objects.filter(category_id=int(category_id)).order_by("-product_click")
 
     # 调用分页的函数，每页显示10条记录
-    page = get_paginator(product_list, 10)
+        product_list = get_paginator(product_list, 10)
 
     context = {
         "title": "商品列表",
         "guest_cart": 1,
-        "page": page,
+        "product_list": product_list,
         "category": category,
         "sort": sid,
         "news": news,
@@ -99,3 +101,29 @@ def detail(request, id):
     }
 
     response = render(request, "product_manage/detail.html", context)
+
+    # 接下来，要将浏览信息，存入 cookie ，以便 最近浏览 功能使用
+    # 存入 cookie 的形式为 { 'gooids':'1,5,6,7,8,9'}
+    product_ids = request.COOKIES.get("product_ids")
+    if product_ids != "":
+        # 将字符串拆分为列表
+        product_ids_list = product_ids.split(",", "")
+        # 判断id是否已经在列表里
+        if product_ids_list.count(id) >= 1:
+            # 若已存在就删除，再插入新的
+            product_ids_list.remove(id)
+        # 将新的id放在 列表的 第一个
+        product_ids_list.insert(0, id)
+        # 如果超过 6个，则删除最后一个，相当于长度为5的队列
+        if len(product_ids_list) >= 6:
+            del product_ids_list[5]
+        # 将列表，以逗号分割的形式 拼接为字符串
+        product_ids = ",".join(product_ids_list)
+
+    else:
+        # 如果为空则直接添加
+        product_ids = id
+
+    response.set_cookie("product_ids", product_ids)
+
+    return response
