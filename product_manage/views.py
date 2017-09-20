@@ -1,4 +1,4 @@
-# from urllib import request
+from django.http import response
 from django.shortcuts import render
 from product_manage.models import Product, Category
 from cart_manage.models import Cart
@@ -91,6 +91,8 @@ def detail(request, product_id):
     except Exception as e:
         print(e)
 
+    # 将商品id存入cookies
+    response.set_cookie("product_id", product_id)
     return render(request, "product_manage/detail.html", locals())
 
 

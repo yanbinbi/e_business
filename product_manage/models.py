@@ -24,7 +24,7 @@ class Brand(models.Model):
 class Product(models.Model):
     product_title = models.CharField(max_length=50)
     # 图片(地址)存储目录
-    product_image = models.ImageField(upload_to="productImage")
+    product_image = models.ImageField(upload_to="static/productImage")
     product_price = models.DecimalField(max_digits=8, decimal_places=2)
     isDelete = models.BooleanField(default=False)
     product_unit = models.CharField(max_length=20, default="500g")
