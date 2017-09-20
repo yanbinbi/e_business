@@ -65,7 +65,7 @@ def login_handle(request):
                     }
                     return render(request, "user_manage/login.html", context=context)
                 # 加密
-                s_user_password = make_password(user_password)
+                s_user_password = make_password(user_password, "ybb", "pbkdf2_sha256")
                 user = authenticate(user_name__exact=user_name, user_password__exact=s_user_password)
                 # 验证用户是否正确
                 if user:
@@ -85,8 +85,8 @@ def login_handle(request):
                     # 将user_name和id写入session，以保持登录状态
                     request.session["user_name"] = user_name
                     request.session["user_id"] = user.id
-
-                    return red
+                    print("正确吗？")
+                    return render(request, "product_manage/index.html", locals())
                 else:
                     # 用户存在但是密码错误，给出错误信息并返回登录界面
                     context = {

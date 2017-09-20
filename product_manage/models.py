@@ -11,6 +11,15 @@ class Category(models.Model):
         return self.category
 
 
+# 品牌表
+class Brand(models.Model):
+    brand = models.CharField(max_length=20)
+    isDelete = models.BooleanField(default=False)
+
+    def __str__(self):
+        return self.brand
+
+
 # 商品类
 class Product(models.Model):
     product_title = models.CharField(max_length=50)
@@ -23,6 +32,7 @@ class Product(models.Model):
     product_description = models.CharField(verbose_name="简介", max_length=100)
     product_detail = HTMLField()
     product_category = models.ForeignKey(Category)
+    # product_brand = models.ForeignKey(Brand, null=True)
     product_remain = models.IntegerField(verbose_name="库存", default=0)
 
     def __str__(self):

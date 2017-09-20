@@ -44,8 +44,8 @@ def index(request):
         # 根据点击量倒叙排列
         product_by_click = category.product_set.order_by("-product_click")[0:4]
         # 主键
-        key_by_id = category + str(i)
-        key_by_click = category + str(i) + str(i)
+        key_by_id = str(category) + str(i)
+        key_by_click = str(category) + str(i) + str(i)
 
         context.setdefault(key_by_id, product_by_id)
         context.setdefault(key_by_click, product_by_click)
@@ -82,8 +82,20 @@ def list_products(request, category_id, sid, pindex):
     return render(request, "product_manage/list.html", context)
 
 
+# 根据商品id查询并展示商品详情
+def detail(request, product_id):
+    try:
+        # filter返回的是queryset对象，get返回的才是索要查询的对象
+        product = Product.objects.get(pk=product_id)
+
+    except Exception as e:
+        print(e)
+
+    return render(request, "product_manage/detail.html", locals())
+
+
 # 商品展示
-def detail(request, id):
+def product_detail(request, id):
     product = Product.objects.filter(pk=int(id)).first()
     # 点击量+1
     product.product_click += 1
