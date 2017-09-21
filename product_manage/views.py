@@ -1,12 +1,13 @@
-# from urllib import request
+from django.http import response
 from django.shortcuts import render
 from product_manage.models import Product, Category
 from cart_manage.models import Cart
 from django.core.paginator import Paginator, Page, PageNotAnInteger, EmptyPage
+from http import cookies
 
 
 # 分页
-def get_paginator(list_to_page, num_per_page):
+def get_paginator(request, list_to_page, num_per_page):
     try:
         # 创建分页对象
         paginator = Paginator(list_to_page, num_per_page)
@@ -91,6 +92,10 @@ def detail(request, product_id):
     except Exception as e:
         print(e)
 
+    # 将商品id存入cookies
+    # response.set
+    c = cookies.SimpleCookie()
+    c["product_id"] = product_id
     return render(request, "product_manage/detail.html", locals())
 
 

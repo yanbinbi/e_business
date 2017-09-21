@@ -20,4 +20,5 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^user/', include("user_manage.urls", namespace="user_manage")),
     url(r'', include("product_manage.urls", namespace="product_manage")),
+    url(r'^cart/', include("cart_manage.urls", namespace="cart_manage")),
 ]

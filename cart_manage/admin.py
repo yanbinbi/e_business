@@ -1,4 +1,4 @@
 from django.contrib import admin
-from cart_manage.models import Cart
+from cart_manage.models import Cart, LineItem
 # Register your models here.
-admin.site.register(Cart)
+admin.site.register(LineItem)

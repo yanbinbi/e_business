@@ -1,34 +1,72 @@
-from django.http import JsonResponse
-from django.shortcuts import render, redirect
-from cart_manage.models import Cart
+from django.http import JsonResponse, HttpResponse
+from django.shortcuts import render, redirect, get_object_or_404
+from django.template import RequestContext
+from django.template.loader import get_template
+from cart_manage.models import Cart, LineItem
+from product_manage.models import Product
+from cart_manage.forms import ProductAddToCartForm
+import json
 
 
 # Create your views here.
-def add(request, product_id, product_count):
-    product_id = int(product_id)
-    product_count = int(product_count)
+def view_cart(request):
+    # 试图获取session中的购物车
+    carts = request.session.get("carts", None)
+    t = get_template('cart_manage/shopcart.html')
+    # 如果session中没有购物车对象，则新创建一个并且把它加到session中
+    if not carts:
+        carts = Cart()
+        request.session["carts"] = carts
+
+    context = {
+        "carts_id": carts,
+    }
+
+    return render(request, "cart_manage/shopcart.html", context)
+
+
+# 根据url的id参数获取商品并添加到购物车
+def add_to_cart(request, product_id):
+    product = Product.objects.get(pk=product_id)
+    carts = request.session.get("carts", None)
+    if not carts:
+        carts = Cart()
+        request.session["carts"] = carts
+    carts.add_product(product)
+    request.session["carts"] = carts
+
+    return view_cart(request)
+
+
+# 清空购物车
+def clean_cart(request):
+    request.session["carts"] = Cart()
+    return view_cart(request)
+
+
+def cart(request):
     user_id = request.session.get("user_id")
-    carts = Cart.objects.filter(product_id=product_id, user_id=user_id)
-    # 先判断 该用户 购物车中 是否 存在 该商品
-    # 如果纯在，则仅作数量上的 加法
-    if len(carts) >= 1:
-        cart = carts[0]
-        cart.count += product_count
-    # 不存在就创建该商品
-    else:
-        cart = Cart()
-        cart.user_id = user_id
-        cart.product_id = product_id
-        cart.count = product_count
+    carts = Cart.objects.filter(user_id=user_id)
 
-    cart.save()
-    # 判断请求方式 是否是ajax，若是则返回json格式的 商品数量即可
-    if request.is_ajax():
-        count = Cart.objects.filter(user_id=user_id).count()
-        return JsonResponse({"count": count})
+    context = {
+        "title": "购物车",
+        "name": 1,
+        "cart": carts
+    }
 
-    else:
-        return redirect("/cart")
+    return render(request, "cart_manage/shopcart.html", context)
+
+
+# 购物车显示商品
+def show_product(request, product_slug):
+    p = get_object_or_404(Product, slug=product_slug)
+    categories = p.product_category.filter(is_active=True)
+    page_title = p.product_title
+    meta_keywords = p.meta_description
+    meta_description = p.meta_description
+    form = ProductAddToCartForm(request)
+
+    return render(request, "cart_manage/shopcart.html", locals())
 
 
 # 购物车编辑功能,传入 cart id 和 count 改变Cart
