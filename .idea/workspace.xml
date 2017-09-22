@@ -2,85 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="14943648-a2f4-416d-b296-04e8c0c217b5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/i/app-icon72x72@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/i/examples/admin-chrome.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/i/examples/admin-firefox.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/i/examples/admin-ie.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/i/examples/admin-opera.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/i/examples/admin-safari.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/i/examples/adminPage.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/i/examples/blogPage.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/i/examples/landing.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/i/examples/landingPage.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/i/examples/loginPage.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/i/examples/sidebarPage.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/i/favicon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/i/startup-640x1096.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/images/chongzhi.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/images/ibar_sprites.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/images/no-img_mid_.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/images/wdsc.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/images/weixin_code_145.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/product_manage/forms.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/addstyle.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/admin.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/amazeui.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/amazeui.flat.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/amazeui.flat.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/amazeui.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/app.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/appstyle.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/bilstyle.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/blogstyle.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/blstyle.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/bostyle.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/cartstyle.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/cmstyle.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/colstyle.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/cpstyle.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/demo.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/dlstyle.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/footstyle.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/hmstyle.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/infstyle.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/jsstyle.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/lostyle.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/newstyle.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/optstyle.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/orstyle.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/personal.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/point.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/refstyle.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/seastyle.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/skin.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/sortstyle.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/stepstyle.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/sustyle.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/vipstyle.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/css/wallet.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/fonts/fontawesome-webfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/address.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/amazeui.ie8polyfill.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/amazeui.ie8polyfill.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/amazeui.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/amazeui.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/amazeui.widgets.helper.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/amazeui.widgets.helper.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/app.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/handlebars.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/jquery-1.7.2.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/jquery-1.7.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/jquery-1.9.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/jquery.flexslider.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/jquery.imagezoom.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/jquery.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/jquery.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/list.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/quick_links.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/script.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cart_manage/views.py" afterPath="$PROJECT_DIR$/cart_manage/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/product_manage/detail.html" afterPath="$PROJECT_DIR$/templates/product_manage/detail.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -144,8 +66,8 @@
       <file leaf-file-name="urls.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/cart_manage/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="5" column="54" lean-forward="false" selection-start-line="5" selection-start-column="54" selection-end-line="5" selection-end-column="54" />
+            <state relative-caret-position="162">
+              <caret line="6" column="56" lean-forward="false" selection-start-line="6" selection-start-column="56" selection-end-line="6" selection-end-column="56" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -166,7 +88,7 @@
       <file leaf-file-name="shopcart.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/cart_manage/shopcart.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5265">
+            <state relative-caret-position="27">
               <caret line="195" column="78" lean-forward="false" selection-start-line="195" selection-start-column="78" selection-end-line="195" selection-end-column="78" />
               <folding />
             </state>
@@ -274,10 +196,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="647" />
-    <option name="y" value="52" />
+    <option name="x" value="620" />
+    <option name="y" value="51" />
     <option name="width" value="1678" />
-    <option name="height" value="1035" />
+    <option name="height" value="1032" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -419,7 +341,14 @@
       <option name="project" value="LOCAL" />
       <updated>1505977953845</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="完善购物车功能">
+      <created>1506044640960</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1506044640960</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -800,14 +729,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/cart_manage/shopcart.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5265">
-          <caret line="195" column="78" lean-forward="false" selection-start-line="195" selection-start-column="78" selection-end-line="195" selection-end-column="78" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/product_manage/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="567">
@@ -844,10 +765,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/cart_manage/shopcart.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="195" column="78" lean-forward="false" selection-start-line="195" selection-start-column="78" selection-end-line="195" selection-end-column="78" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/cart_manage/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="5" column="54" lean-forward="false" selection-start-line="5" selection-start-column="54" selection-end-line="5" selection-end-column="54" />
+        <state relative-caret-position="162">
+          <caret line="6" column="56" lean-forward="false" selection-start-line="6" selection-start-column="56" selection-end-line="6" selection-end-column="56" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>
